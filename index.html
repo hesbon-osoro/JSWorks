@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+   Tutorial 12
+   Case Problem 3
+   Node Tree Map
+   Author: Hesbon Osoro
+   Date: 12/10/22  
+   Filename: js_nodes.html
+-->
+
+    <title>JSWorks Node Tree</title>
+    <meta charset="utf-8" />
+
+    <link href="js_base.css" rel="stylesheet" />
+    <link href="js_layout.css" rel="stylesheet" />
+    <link href="js_tree.css" rel="stylesheet" />
+    <script src="js_tree.js" async></script>
+  </head>
+
+  <body>
+    <section id="page">
+      <header>
+        Customized Web Tools and Tutorials
+        <img src="js_logo.png" alt="JSWorks" />
+        <div>
+          <label for="sBox">Search Topic</label>
+          <input type="search" id="sBox" name="sBox" />
+        </div>
+      </header>
+      <nav class="horizontal">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Sample Code</a></li>
+          <li><a href="#">White Papers</a></li>
+          <li><a href="#">Browser Charts</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <section id="main">
+        <article id="topArticle" class="aClass">
+          <h1>Working with Nodes</h1>
+
+          <h2>Understanding the Node Tree</h2>
+
+          <p>
+            JavaScript organizes an HTML document in a tree structure known as a
+            <dfn>node tree</dfn>. Each HTML element, comment, and text string is
+            stored within the tree as a separate node.
+          </p>
+
+          <p>
+            The box on the right shows the node tree for this article. Note that
+            line returns and blank spaces between element tags are counted as
+            text nodes and appear in the node tree as white space nodes. In this
+            article there are <span id="totalNodes"></span> total nodes,
+            comprised of <span id="elemNodes"></span> element nodes, and
+            <span id="textNodes"></span> text nodes (containing
+            <span id="wsNodes"></span> white space nodes).
+          </p>
+
+          <h2>The Familial Relationship of Nodes</h2>
+          <p>
+            Nodes in the node tree have a familial relationship, where each node
+            acts as a parent, child, and sibling of other nodes. This
+            relationship is expressed using the form
+          </p>
+          <code><em>node</em>.<em>relationship</em></code>
+          <p>
+            where <code><em>node</em></code> is a currently selected node or
+            object and <code><em>relationship</em></code>
+            is the relationship of another node to the current node. For
+            example, the expression
+          </p>
+          <code><em>node</em>.parentNode</code>
+          <p>
+            refers to the parent of <code><em>node</em></code
+            >. In an HTML document the parent of the <code>body</code> node is
+            the <code>html</code> node, and the parent of the
+            <code>html</code> node is the <code>document</code> node, which
+            represents the entire document. The table below describes the other
+            familial relationships under the document object model.
+          </p>
+          <table id="t1">
+            <thead>
+              <tr>
+                <th>Expression</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code><em>node</em>.firstChild</code>
+                </td>
+                <td>
+                  The first child of <code><em>node</em></code
+                  >.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code><em>node</em>.lastChild</code>
+                </td>
+                <td>
+                  The last child of <code><em>node</em></code
+                  >.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code><em>node</em>.childNodes</code>
+                </td>
+                <td>
+                  A collection of all of the nodes contained within
+                  <code><em>node</em></code
+                  >.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code><em>node</em>.previousSibling</code>
+                </td>
+                <td>
+                  The sibling prior to <code><em>node</em></code
+                  >.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code><em>node</em>.nextSibling</code>
+                </td>
+                <td>
+                  The sibling after <code><em>node</em></code
+                  >.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code><em>node</em>.ownerDocument</code>
+                </td>
+                <td>The root node of the document</td>
+              </tr>
+              <tr>
+                <td>
+                  <code><em>node</em>.parentNode</code>
+                </td>
+                <td>
+                  The parent of <code><em>node</em></code
+                  >.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Node Types, Names, and Values</h2>
+          <p>
+            JavaScript provides the following properties to determine each
+            node's type, name, and value:
+          </p>
+          <code>
+            <em>node</em>.nodeType<br />
+            <em>node.</em>nodeName<br />
+            <em>node.</em>nodeValue<br />
+          </code>
+          <p>
+            The <code><em>nodeType</em></code> property returns an integer
+            indicating whether the node refers to an element, a text string, a
+            comment, an attribute, and so on. The
+            <code><em>nodeName property</em></code> returns the name of the node
+            within the document. Finally, the
+            <code><em>nodeValue</em></code>
+            property returns the node's value.
+          </p>
+        </article>
+      </section>
+
+      <footer>
+        JSWorks &copy; 2018 (US)
+        <span>
+          <a href="#">About</a>
+          <a href="#">Terms</a>
+          <a href="#">Help</a>
+        </span>
+      </footer>
+    </section>
+  </body>
+</html>

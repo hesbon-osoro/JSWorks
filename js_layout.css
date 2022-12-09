@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+   Tutorial 12
+   Case Problem 3
+   JSWorks Style Sheet
+   Filename:  js_layout.css 
+*/
+
+/* Page Section Styles */
+section#page {
+  background-color: white;
+  border-right: 1px solid rgb(82, 125, 189);
+  border-left: 1px solid rgb(82, 125, 189);
+  margin: 0px auto;
+  width: 1024px;
+  box-shadow: rgb(50, 100, 160) -20px 0px 90px, rgb(50, 100, 160) 20px 0px 90px;
+}
+
+/* Header styles */
+
+#page > header {
+  font-size: 14px;
+  color: rgb(82, 125, 189);
+  text-align: left;
+  position: relative;
+  height: 135px;
+  width: 890px;
+  padding: 5px;
+  border-bottom: 1px solid rgb(50, 100, 160);
+}
+
+#page > header > div {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  text-align: right;
+  width: 300px;
+}
+
+#page > header > img {
+  display: block;
+  margin: -20px auto 10px;
+}
+
+#page > header > div > label {
+  margin-right: 10px;
+}
+
+#page > header > div > input {
+  width: 100px;
+}
+
+/* Navigation lists */
+
+nav.horizontal {
+  width: 100%;
+}
+
+nav.horizontal ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+nav.horizontal ul li {
+  float: left;
+  width: 12.5%;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav.horizontal ul li a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  outline: 1px solid rgb(82, 125, 189);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: rgb(82, 125, 189);
+}
+
+nav.horizontal ul li a:hover {
+  background-color: rgb(82, 125, 189);
+  color: white;
+}
+
+/* Article Styles */
+
+article {
+  clear: left;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  width: 100%;
+  margin: 20px 0px 0px 15px;
+}
+
+article h1 {
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  width: 100%;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+article h2 {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 15px 0px;
+}
+
+article p {
+  font-size: 14px;
+  margin: 10px 0px 10px 0px;
+  text-align: justify;
+}
+
+article code {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+article span {
+  color: rgb(50, 100, 160);
+  font-weight: bold;
+}
+
+/* Definition Styles */
+
+dfn {
+  font-weight: bold;
+}
+
+/* Table Styles */
+
+table#t1 {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  width: 90%;
+  margin: 10px auto;
+}
+
+table#t1 th {
+  background-color: rgb(50, 100, 160);
+  color: white;
+  border: 1px solid black;
+}
+
+table#t1 td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+/* Page footer styles */
+
+footer {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  clear: left;
+  font-size: 0.8em;
+  height: 30px;
+  text-indent: 15px;
+  padding-top: 10px;
+}
+
+footer span {
+  float: right;
+  margin-right: 10px;
+}
+
+footer span a {
+  color: black;
+}
